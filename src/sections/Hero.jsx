@@ -16,7 +16,7 @@ const Hero = () => {
             I turn coffee into code!
           </p>
           <Link href="#about">
-            <button className="py-4 px-8 group hover:pb-8 relative text-gray-300 border-2 border-gray-300 text-lg duration-300 font-semibold rounded-md mt-10 hover:bg-main hover:text-white hover:border-main hover:translate-y-[-5px] ">
+            <button className="py-4 px-8 group hover:pb-8 relative text-gray-300 border-2 border-gray-300 text-lg duration-300 font-semibold rounded-md mt-10 hover:bg-main hover:text-white hover:border-main ">
               About Me
               <IoChevronDownOutline
                 size={27}

@@ -21,10 +21,11 @@ const NavBar = () => {
           {links.map((item, index) => (
             <Link
               href={item.url}
-              className="hover:text-main cursor-pointer duration-300"
+              className="hover:text-main cursor-pointer duration-300 relative group"
               key={index}
             >
               {item.title}
+              <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
             </Link>
           ))}
         </nav>
@@ -63,8 +64,8 @@ const NavBar = () => {
 
 const links = [
   { title: "Home", url: "/" },
-  { title: "Services", url: "/#services" },
   { title: "About", url: "/#about" },
+  { title: "Services", url: "/#services" },
   { title: "Portfolio", url: "/#portfolio" },
   { title: "Contact", url: "/#contact" },
 ];

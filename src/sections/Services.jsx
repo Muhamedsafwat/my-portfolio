@@ -7,7 +7,7 @@ import { FiUsers, FiMonitor, FiServer } from "react-icons/fi";
 const Services = () => {
   return (
     <section id="services" className="bg-gray-200">
-      <div className="h-screen max-w-7xl mx-auto pt-10 pb-20 flex gap-24">
+      <div className="h-screen max-w-7xl mx-auto pt-10 pb-20 flex gap-16">
         <div className="basis-1/3 mt-32">
           <h2 className="text-6xl font-bold mb-10">Services</h2>
           <p className="text-xl ">
@@ -21,15 +21,15 @@ const Services = () => {
             <div className="w-1/6 h-[3px] mt-1 duration-300 group-hover:w-full rounded-md bg-main" />
           </Link>
         </div>
-        <div className="flex flex-wrap justify-around">
+        <div className="flex flex-wrap justify-between basis-2/3">
           {services.map((item, index) => (
             <div
               key={index}
-              className="basis-[47%] p-8 flex flex-col gap-5 hover:bg-main hover:translate-y-[-10px] mt-5 duration-300 rounded-xl group "
+              className="basis-[48%] p-8 flex flex-col gap-5 hover:bg-main hover:translate-y-[-10px] mt-5 duration-300 rounded-xl group cursor-pointer "
             >
-              <di className="text-main group-hover:text-white duration-300">
+              <div className="text-main group-hover:text-white duration-300">
                 {item.icon}
-              </di>
+              </div>
               <h3 className="text-2xl font-medium group-hover:text-white">
                 {item.title}
               </h3>
