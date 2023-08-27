@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+
+import { IoChevronDownOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
@@ -17,13 +18,9 @@ const Hero = () => {
           <Link href="#about">
             <button className="py-4 px-8 group hover:pb-8 relative text-gray-300 border-2 border-gray-300 text-lg duration-300 font-semibold rounded-md mt-10 hover:bg-main hover:text-white hover:border-main hover:translate-y-[-5px] ">
               About Me
-              <Image
-                alt="down icon"
-                sizes="100vw"
-                src="icons/down.svg"
-                width={35}
-                height={35}
-                className="absolute duration-200 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:translate-y-[1%] group-hover:opacity-100"
+              <IoChevronDownOutline
+                size={27}
+                className="absolute duration-200 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:translate-y-[1%] group-hover:opacity-100 text-white"
               />
             </button>
           </Link>

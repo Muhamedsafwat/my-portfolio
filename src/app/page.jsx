@@ -1,10 +1,11 @@
-import { Hero, About } from "@/sections";
+import { Hero, About, Services } from "@/sections";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <About />
+      <Services />
     </>
   );
 }

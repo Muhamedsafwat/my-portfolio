@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { BiMenu, BiX } from "react-icons/bi";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -28,25 +29,25 @@ const NavBar = () => {
           ))}
         </nav>
         {/*Mobile nav bar*/}
-        <div className="md:hidden">
+        <div className="md:hidden overflow-hidden">
           <button onClick={() => setIsOpen(true)}>
-            <Image src="/icons/hamburger.svg" width={35} height={35} />
+            <BiMenu size={32} />
           </button>
           <nav
             className={`${
-              isOpen ? "translate-x-0" : "translate-x-96"
-            } duration-300 absolute right-0 top-0 h-screen w-2/4 bg-gray-100 `}
+              isOpen ? "translate-x-0" : "translate-x-[100vw]"
+            } duration-300 absolute right-0 top-0 h-screen w-2/4 bg-gray-100 text-gray-900 `}
           >
             <div className="pt-5 px-8">
               <button onClick={() => setIsOpen(false)}>
-                <Image src="/icons/close.svg" width={35} height={35} />
+                <BiX size={32} />
               </button>
             </div>
             <div className="flex flex-col text-lg">
               {links.map((item, index) => (
                 <Link
                   href={item.url}
-                  className="hover:text-main hover:px-16 cursor-pointer duration-300 py-3 px-14 text-gray-800 font-medium"
+                  className="hover:text-main hover:px-16 cursor-pointer duration-300 py-3 px-14 font-medium"
                   key={index}
                 >
                   {item.title}

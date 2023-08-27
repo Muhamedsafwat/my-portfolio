@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
+import { CiLocationOn } from "react-icons/ci";
+
 const About = () => {
   return (
-    <section id="about" className="bg-gray-100">
+    <section id="about" className="bg-[#f0f0f0]">
       <div className="flex max-w-7xl mx-auto gap-20">
         <div className="hidden md:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
           <Image
@@ -31,7 +33,10 @@ const About = () => {
             <p className="text-lg font-semibold">
               Computer and Systems Engineering
             </p>
-            <p>Zagazig University</p>
+            <p className="flex items-center">
+              <CiLocationOn size={20} className="text-main" /> Zagazig
+              University
+            </p>
           </div>
         </div>
       </div>
