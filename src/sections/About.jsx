@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="bg-gray-100">
       <div className="flex max-w-7xl mx-auto gap-20">
-        <div className="hidden md:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-xl">
+        <div className="hidden md:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
           <Image
             sizes="100vw"
             alt="Laptop image"

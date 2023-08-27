@@ -12,7 +12,7 @@ const Hero = () => {
             MUHAMED SAFWAT
           </h1>
           <p className="text-gray-300 text-xl md:text-3xl tracking-[3px] mt-4">
-            I turn coffee into websites!
+            I turn coffee into code!
           </p>
           <Link href="#about">
             <button className="py-4 px-8 group hover:pb-8 relative text-gray-300 border-2 border-gray-300 text-lg duration-300 font-semibold rounded-md mt-10 hover:bg-main hover:text-white hover:border-main hover:translate-y-[-5px] ">
