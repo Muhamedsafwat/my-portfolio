@@ -22,3 +22,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #f81f01;
 }
+
+ul.slick-dots li {
+  margin: 0;
+}
+
+li.slick-active div {
+  background: white;
+  border-color: #f81f01;
+  width: 15px;
+  height: 15px;
+  transform: translate(-3px, -3px);
+}

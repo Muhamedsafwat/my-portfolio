@@ -5,8 +5,8 @@ import { CiLocationOn } from "react-icons/ci";
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#f0f0f0]">
-      <div className="flex max-w-7xl mx-auto gap-20">
+    <section id="about" className="bg-white">
+      <div className="flex max-w-7xl mx-auto gap-20 pb-10 md:pb-0">
         <div className="hidden md:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
           <Image
             sizes="100vw"
