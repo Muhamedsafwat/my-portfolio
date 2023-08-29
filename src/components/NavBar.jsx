@@ -36,8 +36,8 @@ const NavBar = () => {
           </button>
           <nav
             className={`${
-              isOpen ? "translate-x-0" : "translate-x-[100vw]"
-            } duration-300 absolute right-0 top-0 h-screen w-2/4 bg-gray-100 text-gray-900 `}
+              isOpen ? "w-1/2 opacity-100" : "w-0 overflow-hidden opacity-0"
+            } duration-300 absolute right-0 top-0 h-screen bg-gray-100 text-gray-900 `}
           >
             <div className="pt-5 px-8">
               <button onClick={() => setIsOpen(false)}>

@@ -13,24 +13,24 @@ import {
 const Contact = () => {
   return (
     <section id="contact" className="flex items-end text-white">
-      <div className="basis-1/2 relative h-[500px] rounded-tr-lg shadow-lg shadow-gray-700 overflow-hidden bg-[url(/pattern-1.png)]">
+      <div className="basis-1/2 relative h-[500px] rounded-tr-lg shadow-lg shadow-gray-700 overflow-hidden bg-[url(/pattern-1.png)] hidden lg:block">
         <div className="bg-gradient-to-br from-[#da1900] to-[#c5075d] absolute w-full h-full opacity-[0.85] z-0" />
-        <div className="z-10 relative h-full w-full flex justify-center flex-col px-40 ">
+        <div className="z-10 relative h-full w-full flex justify-center flex-col px-20 2xl:px-40 ">
           <p className="text-lg tracking-[3.5px]">READY TO DO THIS</p>
           <h2 className="text-7xl font-black">
             Let's get <br /> to work!
           </h2>
           <Link href="/contact">
             <button className="px-10 py-4 border-2 rounded-md border-white text-lg tracking-widest mt-10 hover:bg-white hover:text-main hover:translate-y-[-7px] duration-300">
-              CONTACT US
+              CONTACT ME
             </button>
           </Link>
         </div>
       </div>
-      <div className="bg-gray-900 text-gray-400 basis-1/2 h-96">
+      <div className="bg-gray-900 text-gray-400 h-auto py-16 w-full lg:basis-1/2 lg:h-96 lg:py-0">
         <div className="flex justify-center items-center h-full gap-10">
-          <div className="flex justify-around w-4/5 ">
-            <div>
+          <div className="flex justify-around w-4/5 mt-5 ">
+            <div className="hidden sm:block">
               <h3 className="text-xl font-medium mb-7">Quick Link</h3>
               <ul className="flex flex-col gap-3">
                 {internalLinks.map((item, index) => (
@@ -40,8 +40,8 @@ const Contact = () => {
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col">
-              <h3 className="text-xl font-medium mb-5">Say Hello</h3>
+            <div className="flex flex-col w-full sm:w-auto">
+              <h3 className="text-xl font-medium mb-7">Say Hello</h3>
               {externalLinks.slice(0, 2).map((item, index) => (
                 <a
                   key={index}

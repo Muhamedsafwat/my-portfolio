@@ -15,6 +15,29 @@ const Portfolio = () => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "50px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     customPaging: function (i) {
       return (
         <div className="rounded-full w-2 h-2 bg-gray-400 border-[3px] border-gray-400 duration-200 mt-2"></div>
@@ -32,7 +55,10 @@ const Portfolio = () => {
       <div className="pb-16 max-w-[100vw] overflow-hidden">
         <Slider {...sliderSettings}>
           {projects.map((item, index) => (
-            <div className="h-[570px] p-4 pb-8 group  duration-300" key={index}>
+            <div
+              className="aspect-[8/11] max-h-[80vh] p-4 pb-8 group  duration-300"
+              key={index}
+            >
               <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-500">
                 <Image src={item.cover} fill className="object-cover z-0" />
                 <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
