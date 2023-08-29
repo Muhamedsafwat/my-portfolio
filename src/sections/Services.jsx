@@ -7,8 +7,8 @@ import { FiUsers, FiMonitor, FiServer } from "react-icons/fi";
 const Services = () => {
   return (
     <section id="services" className="bg-gray-100">
-      <div className="md:h-screen max-w-7xl mx-auto pt-10 pb-20 flex gap-16 flex-col md:flex-row px-10">
-        <div className="basis-1/3 mt-10 md:mt-32 ">
+      <div className="lg:h-screen max-w-7xl mx-auto pt-10 pb-20 flex gap-16 flex-col lg:flex-row px-10">
+        <div className="basis-1/3 mt-10 lg:mt-32 ">
           <h2 className="text-6xl font-bold mb-10">Services</h2>
           <p className="text-xl ">
             I use my skills in web development to build and maintain high

@@ -6,8 +6,8 @@ import { CiLocationOn } from "react-icons/ci";
 const About = () => {
   return (
     <section id="about" className="bg-white">
-      <div className="flex max-w-7xl mx-auto gap-20 pb-10 md:pb-0">
-        <div className="hidden md:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
+      <div className="flex max-w-7xl mx-auto gap-20 pb-10 lg:pb-0">
+        <div className="hidden lg:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
           <Image
             sizes="100vw"
             alt="Laptop image"
@@ -16,7 +16,7 @@ const About = () => {
             fill={true}
           />
         </div>
-        <div className="md:basis-2/3 px-10 flex flex-col mt-10 md:mt-36 md:text-start">
+        <div className="lg:basis-2/3 px-10 flex flex-col mt-10 lg:mt-36 lg:text-start">
           <h2 className="text-6xl font-bold mb-6">About</h2>
           <p className="text-2xl text-gray-600">
             A Sofware Engineer and a frontend focused web developer who is

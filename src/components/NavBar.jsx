@@ -13,7 +13,7 @@ const NavBar = () => {
           href="/"
           className="font-bold text-3xl text-white cursor-pointer "
         >
-          <span className="text-[#f81f01] stroke-white stroke-2">{"{S}"}</span>
+          <span className="text-[#f81f01]">{"{S}"}</span>
           AFWAT
         </Link>
         {/*Desktop navbar*/}

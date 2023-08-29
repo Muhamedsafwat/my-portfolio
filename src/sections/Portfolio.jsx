@@ -75,28 +75,28 @@ const projects = [
   {
     cover:
       "https://trydo.rainbowit.net/assets/images/portfolio/portfolio-2.jpg",
-    title: "Fitness Coatch website",
-    category: "Web application",
+    title: "Kasper Agency",
+    category: "Landing page",
     slug: "fitness-website",
   },
   {
     cover:
       "https://trydo.rainbowit.net/assets/images/portfolio/portfolio-3.jpg",
-    title: "Fitness Coatch website",
-    category: "Web application",
+    title: "Leon Agency",
+    category: "Landing page",
     slug: "fitness-website",
   },
   {
     cover:
       "https://trydo.rainbowit.net/assets/images/portfolio/portfolio-4.jpg",
-    title: "Fitness Coatch website",
-    category: "Web application",
+    title: "React portfolio",
+    category: "Personal portfolio",
     slug: "fitness-website",
   },
   {
     cover:
       "https://trydo.rainbowit.net/assets/images/portfolio/portfolio-5.jpg",
-    title: "Fitness Coatch website",
+    title: "URL shortener",
     category: "Web application",
     slug: "fitness-website",
   },
