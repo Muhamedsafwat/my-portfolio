@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserInfo } from "@/context/AuthContext";
 import Link from "next/link";
-import Image from "next/image";
 
 import { BiMenu, BiX } from "react-icons/bi";
 const NavBar = () => {
+  const { user } = useContext(UserInfo);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="absolute top-0 left-0 right-0 z-10 text-gray-100">
@@ -28,6 +29,13 @@ const NavBar = () => {
               <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
             </Link>
           ))}
+          <Link
+            href="/dashboard"
+            className="hover:text-main cursor-pointer duration-300 relative group"
+          >
+            Dashboard
+            <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
+          </Link>
         </nav>
         {/*Mobile nav bar*/}
         <div className="md:hidden overflow-hidden">
@@ -66,7 +74,7 @@ const links = [
   { title: "Home", url: "/" },
   { title: "About", url: "/#about" },
   { title: "Services", url: "/#services" },
-  { title: "Portfolio", url: "/#portfolio" },
+  { title: "Portfolio", url: "/portfolio" },
   { title: "Contact", url: "/#contact" },
 ];
 export default NavBar;

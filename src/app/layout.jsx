@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import { NavBar, ScrollToTop, Footer } from "@/components";
+import AuthContext from "@/context/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,14 +19,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <body className={inter.className + "relative"}>
-        <NavBar />
-        <main className="text-gray-800 relative">
-          {children}
-          <ScrollToTop />
-        </main>
-      </body>
-    </html>
+    <AuthContext>
+      <html className="scroll-smooth" lang="en">
+        <body
+          className={inter.className + "relative w-screen overflow-x-hidden"}
+        >
+          <NavBar />
+          <main className="text-gray-800 relative">
+            {children}
+            <ScrollToTop />
+          </main>
+        </body>
+      </html>
+    </AuthContext>
   );
 }

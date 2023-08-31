@@ -60,13 +60,13 @@ const services = [
   {
     title: "Web applications",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, illum neque. Odit incidunt ullam atque similique vel, dignissimos eveniet. ",
+      "Service provider, own an online store and need a way to interact with your clients? Let's build a full-stack web application that achieves your goal.",
     icon: <GoStack size={60} />,
   },
   {
     title: "Web API's",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, illum neque. Odit incidunt ullam atque similique vel, dignissimos eveniet. ",
+      "If you have a frontend template and need to integrate a third party API or even build one to fit your needs, Then I'm the one who can help you.",
     icon: <FiServer size={60} />,
   },
 ];

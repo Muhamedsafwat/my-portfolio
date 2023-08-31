@@ -34,3 +34,13 @@ li.slick-active div {
   height: 15px;
   transform: translate(-3px, -3px);
 }
+
+.slick-next:before {
+  color: #333 !important;
+  margin-left: 5px;
+}
+
+.slick-prev:before {
+  color: #333 !important;
+  margin-right: 15px;
+}

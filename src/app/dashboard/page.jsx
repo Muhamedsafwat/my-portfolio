@@ -1,65 +1,20 @@
-"use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
-const Portfolio = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3.5,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "50px",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    customPaging: function (i) {
-      return (
-        <div className="rounded-full w-2 h-2 bg-gray-400 border-[3px] border-gray-400 duration-200 mt-2"></div>
-      );
-    },
-  };
+const page = () => {
   return (
-    <section id="portfolio">
-      <div className="max-w-7xl mx-auto px-10 md:px-0 pt-16 pb-10">
-        <h2 className="text-6xl font-bold mb-6">Top projects</h2>
-        <p className="text-xl text-gray-600 ml-1">
-          Here are some of my latest projects
-        </p>
-      </div>
-      <div className="pb-16 max-w-[100vw] overflow-hidden">
-        <Slider {...sliderSettings}>
+    <div className="bg-gray-900 pt-32 min-h-screen flex justify-center items-center text-gray-100">
+      <div className="max-w-7xl p-10 mx-auto w-full">
+        <Link href="/dashboard/add-project">
+          <button className="px-4 py-2 bg-main text-white rounded-md text-lg">
+            Add project
+          </button>
+        </Link>
+        <div className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 ">
           {projects.map((item, index) => (
-            <div
-              className="aspect-[8/11] max-h-[80vh] p-4 pb-8 group  duration-300"
-              key={index}
-            >
-              <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-500">
+            <div className="aspect-[8/11] group duration-300" key={index}>
+              <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
                 <Image src={item.cover} fill className="object-cover z-0" />
                 <div
                   className={`w-full h-full bg-gradient-to-b ${
@@ -81,16 +36,9 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
-      <div className="flex justify-center pb-24">
-        <Link href="/portfolio">
-          <button className="bg-main border-main border-2 px-5 rounded-md py-2 duration-300 hover:bg-transparent hover:border-main hover:text-main hover:translate-y-[-8px] text-white mx-auto text-lg">
-            View All Projects
-          </button>
-        </Link>
-      </div>
-    </section>
+    </div>
   );
 };
 
@@ -105,7 +53,6 @@ const projects = [
   {
     cover:
       "https://trydo.rainbowit.net/assets/images/portfolio/portfolio-2.jpg",
-    thumbnailColor: "from-[#038cfb]",
     title: "Kasper Agency",
     category: "Landing page",
     slug: "fitness-website",
@@ -133,4 +80,4 @@ const projects = [
   },
 ];
 
-export default Portfolio;
+export default page;

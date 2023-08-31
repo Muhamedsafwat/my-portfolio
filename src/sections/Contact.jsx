@@ -27,48 +27,49 @@ const Contact = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-gray-900 text-gray-400 h-auto py-16 w-full lg:basis-1/2 lg:h-96 lg:py-0">
-        <div className="flex justify-center items-center h-full gap-10">
-          <div className="flex justify-around w-4/5 mt-5 ">
-            <div className="hidden sm:block">
-              <h3 className="text-xl font-medium mb-7">Quick Link</h3>
-              <ul className="flex flex-col gap-3">
-                {internalLinks.map((item, index) => (
-                  <li key={index} className="duration-300 hover:text-main">
-                    <Link href={item.url}>{item.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col w-full sm:w-auto">
-              <h3 className="text-xl font-medium mb-7">Say Hello</h3>
-              {externalLinks.slice(0, 2).map((item, index) => (
+      <div className="bg-gray-900 text-gray-400 h-auto py-16 flex justify-center items-center flex-col w-full lg:basis-1/2 lg:h-96 lg:py-0">
+        <div className="flex justify-around w-4/5 mt-5 ">
+          <div className="hidden sm:block">
+            <h3 className="text-xl font-medium mb-7">Quick Links</h3>
+            <ul className="flex flex-col gap-3">
+              {internalLinks.map((item, index) => (
+                <li key={index} className="duration-300 hover:text-main">
+                  <Link href={item.url}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col w-full sm:w-auto">
+            <h3 className="text-xl font-medium mb-7">Say Hello</h3>
+            {externalLinks.slice(0, 2).map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                className="duration-300 hover:text-main mb-3 flex items-center gap-1"
+              >
+                {item.icon}
+                <p>{item.label}</p>
+              </a>
+            ))}
+            <div className="flex gap-6 mt-4">
+              {externalLinks.slice(2, 6).map((item, index) => (
                 <a
                   key={index}
                   href={item.url}
                   target="_blank"
-                  className="duration-300 hover:text-main mb-3 flex items-center gap-1"
+                  className="duration-300 hover:text-white hover:scale-110 mb-3 flex items-center gap-1"
                 >
                   {item.icon}
-                  <p>{item.label}</p>
                 </a>
               ))}
-              <div className="flex gap-6 mt-4">
-                {externalLinks.slice(2, 6).map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.url}
-                    target="_blank"
-                    className="duration-300 hover:text-white hover:scale-110 mb-3 flex items-center gap-1"
-                  >
-                    {item.icon}
-                  </a>
-                ))}{" "}
-              </div>
             </div>
           </div>
         </div>
-        <div></div>
+        <p className="text-gray-500 translate-y-10">
+          This website is Developed and powered by{" "}
+          <Link href="/dashboard/login">Muhamed Safwat</Link>
+        </p>
       </div>
     </section>
   );
