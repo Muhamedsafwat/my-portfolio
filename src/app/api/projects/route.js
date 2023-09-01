@@ -28,3 +28,20 @@ export async function POST(request) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 }
+
+export async function GET(request) {
+  try {
+    await connectDB();
+  } catch (error) {
+    console.log(error);
+    return new NextResponse("Couldn't connect to database", { status: 500 });
+  }
+
+  const projects = await Project.find();
+
+  if (projects) {
+    return new NextResponse(JSON.stringify(projects), { status: 200 });
+  } else {
+    return new NextResponse("No projects found", { status: 404 });
+  }
+}

@@ -22,8 +22,12 @@ const LoginPage = () => {
         { withCredentials: true }
       )
       .then((res) => {
-        login(res.data);
-        router.push("/");
+        if (res.status == 200) {
+          login(res.data);
+          router.push("/");
+        } else {
+          console.log(res);
+        }
       })
       .catch((err) => console.log(err));
   };
