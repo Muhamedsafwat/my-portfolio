@@ -5,6 +5,7 @@ const projectSchema = new Schema({
   slug: {
     type: String,
     required: true,
+    unique: true,
   },
   title: {
     type: String,
@@ -20,7 +21,6 @@ const projectSchema = new Schema({
   },
   brandColor: String,
   gallery: [String],
-  subTitle: String,
   description: String,
   features: [String],
   technologiesUsed: [String],

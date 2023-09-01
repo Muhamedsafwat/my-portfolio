@@ -72,7 +72,7 @@ const ProjectDetails = () => {
           ))}
         </ul>
       </section>
-      <section className="pb-20 py-10 max-w-6xl px-10 mx-auto">
+      <section className="pb-20 max-w-6xl px-10 mx-auto">
         <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Gallery:
         </h2>

@@ -9,7 +9,7 @@ const Portfolio = () => {
         <Image className="object-cover" fill src="/portfolio-cover.jpg" />
         <div className="w-full h-full bg-gray-900 bg-opacity-90 backdrop-blur-[2px] absolute flex flex-col justify-center items-center">
           <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
-            All Projects
+            ALL PROJECTS
           </h1>
           <p className="text-gray-300 text-xl md:text-2xl tracking-[3px] mt-4">
             Go around and have fun!

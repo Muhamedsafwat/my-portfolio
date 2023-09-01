@@ -37,7 +37,7 @@ const LoginPage = () => {
   }, [user]);
 
   return (
-    <div className="bg-gray-900 h-screen flex justify-center items-center text-gray-100">
+    <>
       {isLoading ? (
         <h1 className="text-5xl">loading...</h1>
       ) : (
@@ -64,7 +64,7 @@ const LoginPage = () => {
           </button>
         </form>
       )}
-    </div>
+    </>
   );
 };
 

@@ -29,13 +29,15 @@ const NavBar = () => {
               <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
             </Link>
           ))}
-          <Link
-            href="/dashboard"
-            className="hover:text-main cursor-pointer duration-300 relative group"
-          >
-            Dashboard
-            <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
-          </Link>
+          {user ? (
+            <Link
+              href="/dashboard"
+              className="hover:text-main cursor-pointer duration-300 relative group"
+            >
+              Dashboard
+              <div className="w-full absolute bottom-2 h-[3px] bg-main rounded-md opacity-0 group-hover:bottom-[-3px] group-hover:opacity-80 duration-300" />
+            </Link>
+          ) : null}
         </nav>
         {/*Mobile nav bar*/}
         <div className="md:hidden overflow-hidden">
@@ -62,6 +64,14 @@ const NavBar = () => {
                   {item.title}
                 </Link>
               ))}
+              {user ? (
+                <Link
+                  href={"/dashboard"}
+                  className="hover:text-main hover:px-16 cursor-pointer duration-300 py-3 px-14 font-medium"
+                >
+                  Dashboard
+                </Link>
+              ) : null}
             </div>
           </nav>
         </div>
