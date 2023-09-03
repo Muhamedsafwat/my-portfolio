@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <p className="text-gray-500 translate-y-10">
+        <p className="text-gray-500 text-center text-sm md:text-md translate-y-10">
           This website is Developed and powered by{" "}
           <Link href="/dashboard/login">Muhamed Safwat</Link>
         </p>

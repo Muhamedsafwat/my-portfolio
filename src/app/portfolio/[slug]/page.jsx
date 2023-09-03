@@ -24,7 +24,7 @@ const ProjectDetails = async ({ params }) => {
       <header className="relative w-screen overflow-hidden h-[70vh]">
         <Image src={data.cover} fill className="object-cover" />
         <div className="w-full h-full bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] absolute flex justify-center items-center">
-          <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl capitalize font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
             {data.title}
           </h1>
         </div>
