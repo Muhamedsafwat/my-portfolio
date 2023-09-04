@@ -89,9 +89,7 @@ const Portfolio = () => {
                     fill
                     className="object-cover z-0"
                   />
-                  <div
-                    className={`w-full h-full bg-gradient-to-b ${item.brandColor} to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300`}
-                  />
+                  <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
                   <div className="w-full h-full bg-gradient-to-t to-transparent from-[rgba(0,0,0,0.8)] z-[3] absolute" />
                   <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-10 flex flex-col gap-5 items-start">
                     <p className="text-base text-gray-300 tracking-wider font-medium ">
@@ -99,7 +97,7 @@ const Portfolio = () => {
                     </p>
                     <h3 className="text-2xl font-bold">{item.title}</h3>
                     <Link href={`/portfolio/${item.slug}`}>
-                      <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 hover:border-main">
+                      <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 hover:border-main hover:bg-main">
                         Details
                       </button>
                     </Link>

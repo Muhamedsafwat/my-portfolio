@@ -19,7 +19,6 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  brandColor: String,
   gallery: [String],
   description: String,
   features: [String],

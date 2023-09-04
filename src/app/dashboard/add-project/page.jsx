@@ -22,7 +22,6 @@ const AddPost = () => {
   const [category, setCategory] = useState("");
   const [previewLink, setPreviewLink] = useState("");
   const [sourceCodeLink, setSourceCodeLink] = useState("");
-  const [brandColor, setBrandColor] = useState("");
   const [thumbnail, setThumbnail] = useState(null);
   const [cover, setCover] = useState(null);
   //Add feature to features array
@@ -67,7 +66,7 @@ const AddPost = () => {
       slug,
       thumbnail: thumbnailUrl,
       cover: coverURl,
-      brandColor,
+
       gallery: galleryUrl,
       description,
       features,
@@ -141,12 +140,7 @@ const AddPost = () => {
             placeholder="Source code link"
           />
         </div>
-        <input
-          onChange={(e) => setBrandColor(`from-[${e.target.value}]`)}
-          type="text"
-          className="bg-gray-300 bg-opacity-10 border-[1px] border-gray-600 p-4 rounded-md text-gray-500"
-          placeholder="brand color"
-        />
+
         <div>
           <div className="flex justify-between gap-5">
             <input
