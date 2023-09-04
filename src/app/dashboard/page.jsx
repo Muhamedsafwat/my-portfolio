@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import axios from "axios";
 
-const page = () => {
+const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [projects, setProjects] = useState([]);
 
@@ -86,4 +86,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Dashboard;

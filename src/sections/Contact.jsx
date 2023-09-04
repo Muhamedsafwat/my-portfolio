@@ -18,7 +18,7 @@ const Contact = () => {
         <div className="z-10 relative h-full w-full flex justify-center flex-col px-20 2xl:px-40 ">
           <p className="text-lg tracking-[3.5px]">READY TO DO THIS</p>
           <h2 className="text-7xl font-black">
-            Let's get <br /> to work!
+            Let&apos;s get <br /> to work!
           </h2>
           <Link href="/contact">
             <button className="px-10 py-4 border-2 rounded-md border-white text-lg tracking-widest mt-10 hover:bg-white hover:text-main hover:translate-y-[-7px] duration-300">

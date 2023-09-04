@@ -25,7 +25,7 @@ const Contact = () => {
             Contact Me
           </h1>
           <p className="text-gray-300 text-lg md:text-2xl tracking-[3px] mt-4">
-            Let's get in touch
+            Let&apos;s get in touch
           </p>
         </div>
       </header>

@@ -24,12 +24,12 @@ const About = () => {
             the success of your business.
           </p>
           <p className="text-2xl text-gray-600 mt-3">
-            I'm passionate about cutting-edge, pixel-perfect beautiful
+            I&apos;m passionate about cutting-edge, pixel-perfect beautiful
             interfaces and intuitively implemented UX
           </p>
           <div>
             <h3 className="text-3xl font-bold mt-10 mb-3">Education</h3>
-            <p>Bachelor's degree (2022 - Present)</p>
+            <p>Bachelor&apos;s degree (2022 - Present)</p>
             <p className="text-lg font-semibold">
               Computer and Systems Engineering
             </p>
