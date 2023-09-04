@@ -31,7 +31,7 @@ const NavBar = () => {
           AFWAT
         </Link>
         {/*Desktop navbar*/}
-        <nav className="hidden md:flex gap-8 text-lg font-semibold">
+        <nav className="hidden md:flex text-white gap-8 text-lg font-semibold">
           {links.map((item, index) => (
             <Link
               href={item.url}

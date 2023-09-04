@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AiOutlineFolderAdd } from "react-icons/ai";
+import {
+  AiOutlineFolderAdd,
+  AiOutlineEdit,
+  AiOutlineDelete,
+} from "react-icons/ai";
 import axios from "axios";
 
 const page = () => {
@@ -42,7 +46,7 @@ const page = () => {
         <div className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 ">
           {projects.map((item, index) => (
             <div className="aspect-[8/11] group duration-300" key={index}>
-              <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
+              <div className="relative h-full w-full rounded-lg overflow-hidden duration-300 shadow-lg shadow-gray-800">
                 <Image
                   src={item.thumbnail}
                   alt="thumbnail"
@@ -60,11 +64,20 @@ const page = () => {
                     {item.category}
                   </p>
                   <h3 className="text-2xl font-bold">{item.title}</h3>
-                  <Link href={`/portfolio/${item.slug}`}>
-                    <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 hover:border-main">
-                      Details
-                    </button>
-                  </Link>
+                  <div className="flex gap-4">
+                    <Link href={`/dashboard/${item.slug}`}>
+                      <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 flex items-center gap-2 hover:border-main">
+                        <AiOutlineEdit />
+                        <p>Edit</p>
+                      </button>
+                    </Link>
+                    <Link href={`/portfolio/${item.slug}`}>
+                      <button className="bg-transparent border-gray-400 border-2 px-5 flex items-center gap-2 rounded-md py-2 duration-300 hover:border-red-600">
+                        <AiOutlineDelete />
+                        <p>Delete</p>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
