@@ -17,7 +17,7 @@ const LoginPage = () => {
 
     axios
       .post(
-        "http://localhost:3000/api/auth",
+        "http://127.0.0.1/api/auth",
         { username, password },
         { withCredentials: true }
       )

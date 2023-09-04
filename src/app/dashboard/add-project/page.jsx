@@ -76,7 +76,7 @@ const AddPost = () => {
       sourceCodeLink,
     };
     axios
-      .post("http://localhost:3000/api/projects", reqBody, {
+      .post("http://127.0.0.1/api/projects", reqBody, {
         withCredentials: true,
       })
       .then((res) => {

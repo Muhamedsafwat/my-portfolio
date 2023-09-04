@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const getData = () => {
       axios
-        .get("http://localhost:3000/api/projects")
+        .get("http://127.0.0.1/api/projects")
         .then((res) => {
           if (res.status == 200) {
             console.log(res.data);
