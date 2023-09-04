@@ -17,6 +17,7 @@ const Contact = () => {
           alt="contact us page cover"
           className="object-cover"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src="/portfolio-cover.jpg"
         />
         <div className="w-full h-full text-center bg-gray-900 bg-opacity-90 backdrop-blur-[2px] absolute flex flex-col justify-center items-center">
@@ -61,6 +62,7 @@ const Contact = () => {
               alt="laptop image"
               className="object-cover rounded-md"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

@@ -18,7 +18,14 @@ const Portfolio = async () => {
   return (
     <>
       <header className="relative h-[65vh]">
-        <Image className="object-cover" fill src="/portfolio-cover.jpg" />
+        <Image
+          className="object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          src="/portfolio-cover.jpg"
+          alt="portfolio page cover"
+          priority
+        />
         <div className="w-full h-full bg-gray-900 text-center bg-opacity-90 backdrop-blur-[2px] absolute flex flex-col justify-center items-center">
           <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
             ALL PROJECTS
@@ -32,7 +39,13 @@ const Portfolio = async () => {
         {projects.map((item, index) => (
           <div className="aspect-[8/11] group duration-300" key={index}>
             <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
-              <Image src={item.thumbnail} fill className="object-cover z-0" />
+              <Image
+                src={item.thumbnail}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                fill
+                className="object-cover z-0"
+                alt={item.slug}
+              />
               <div
                 className={`w-full h-full bg-gradient-to-b ${
                   item.brandColor || "from-main"

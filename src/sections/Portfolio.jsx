@@ -16,7 +16,6 @@ const Portfolio = () => {
         .get("http://localhost:3000/api/projects")
         .then((res) => {
           if (res.status == 200) {
-            console.log(res.data);
             setProjects(res.data);
           } else {
             console.log(res);
@@ -85,9 +84,11 @@ const Portfolio = () => {
               >
                 <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-500">
                   <Image
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src={item.thumbnail}
                     fill
                     className="object-cover z-0"
+                    alt={item.slug}
                   />
                   <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
                   <div className="w-full h-full bg-gradient-to-t to-transparent from-[rgba(0,0,0,0.8)] z-[3] absolute" />

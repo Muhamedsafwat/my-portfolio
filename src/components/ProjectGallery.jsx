@@ -25,7 +25,12 @@ const ProjectGallery = ({ gallery }) => {
       {gallery.map((item, index) => (
         <div key={index} className="p-2">
           <div className="relative h-[500px]">
-            <Image className="object-contain" fill src={item} />
+            <Image
+              className="object-contain"
+              fill
+              src={item}
+              alt={`project image #${index}`}
+            />
           </div>
         </div>
       ))}

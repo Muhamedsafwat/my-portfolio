@@ -22,14 +22,20 @@ const ProjectDetails = async ({ params }) => {
   return (
     <>
       <header className="relative w-screen overflow-hidden h-[70vh]">
-        <Image src={data.cover} fill className="object-cover" />
+        <Image
+          src={data.cover}
+          fill
+          className="object-cover"
+          alt="project cover"
+          priority
+        />
         <div className="w-full h-full bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] absolute flex justify-center items-center">
           <h1 className="text-6xl md:text-7xl uppercase font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
             {data.title}
           </h1>
         </div>
       </header>
-      <section className=" max-w-5xl mx-auto pb-10 mt-5 lg:pb-0">
+      <section className=" max-w-5xl mx-auto pb-10 px-10 mt-5 lg:pb-0">
         <h2 className="text-4xl font-extrabold py-5 my-5 border-b-[1px] border-gray-200">
           Description:
         </h2>
@@ -61,7 +67,7 @@ const ProjectDetails = async ({ params }) => {
           </div>
         </div>
       </section>
-      <section className=" max-w-5xl mx-auto pb-10  lg:pb-0">
+      <section className=" max-w-5xl mx-auto pb-10 px-10  lg:pb-0">
         <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Features:
         </h2>
@@ -73,7 +79,7 @@ const ProjectDetails = async ({ params }) => {
           ))}
         </ul>
       </section>
-      <section className=" max-w-5xl mx-auto pb-10  lg:pb-0">
+      <section className=" max-w-5xl mx-auto pb-10 px-10 lg:pb-0">
         <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Technologies used:
         </h2>
@@ -95,14 +101,5 @@ const ProjectDetails = async ({ params }) => {
     </>
   );
 };
-
-const gallery = [
-  "/project/2.png",
-  "/project/1.png",
-  "/project/3.png",
-  "/project/4.png",
-  "/project/5.png",
-  "/project/6.png",
-];
 
 export default ProjectDetails;

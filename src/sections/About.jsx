@@ -9,7 +9,7 @@ const About = () => {
       <div className="flex max-w-7xl mx-auto gap-20 pb-10 lg:pb-0">
         <div className="hidden lg:block basis-[40%] relative h-screen overflow-hidden rounded-lg top-[-4rem] shadow-2xl shadow-gray-600">
           <Image
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="Laptop image"
             src="/about.jpg"
             className="object-cover"
