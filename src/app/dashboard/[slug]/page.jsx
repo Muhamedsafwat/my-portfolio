@@ -79,7 +79,7 @@ const EditPost = ({ params }) => {
       sourceCodeLink,
     };
     axios
-      .put(`http://127.0.0.1/api/projects/${params.slug}`, reqBody, {
+      .put(`http://127.0.0.1:3000/api/projects/${params.slug}`, reqBody, {
         withCredentials: true,
       })
       .then((res) => {
@@ -99,7 +99,7 @@ const EditPost = ({ params }) => {
   useEffect(() => {
     const getData = () => {
       axios
-        .get(`http://127.0.0.1/api/projects/${params.slug}`)
+        .get(`http://127.0.0.1:3000/api/projects/${params.slug}`)
         .then((res) => {
           setTitle(res.data.title);
           setSlug(res.data.slug);

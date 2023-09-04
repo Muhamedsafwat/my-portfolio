@@ -27,7 +27,7 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post("http://127.0.0.1/api/messages", {
+      .post("http://127.0.0.1:3000/api/messages", {
         name,
         phone,
         email,
