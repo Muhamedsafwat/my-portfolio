@@ -29,7 +29,7 @@ const Contact = () => {
         </div>
       </header>
       <section className="bg-gray-100">
-        <div className="flex max-w-7xl px-10 py-28 gap-10 mx-auto">
+        <div className="flex flex-col max-w-7xl px-10 py-20 pb-16 gap-[5rem] mx-auto lg:flex-row lg:py-28 lg:gap-10">
           {contactCards.map((item, index) => (
             <a key={index} className="flex-1" href={item.url}>
               <div className="relative  cursor-pointer group">
@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
       </section>
       <section className="bg-white">
-        <div className="flex max-w-7xl items-center px-10 py-28 gap-16 mx-auto">
+        <div className="flex max-w-7xl items-center px-10 py-28 gap-16 mx-auto flex-col lg:flex-row">
           <div className="basis-3/5">
             <h2 className="text-5xl font-bold">Leave a message</h2>
             <p className="text-2xl mt-5">
@@ -55,7 +55,7 @@ const Contact = () => {
             </p>
             <ContactForm />
           </div>
-          <div className="basis-2/5 relative h-[80vh]">
+          <div className="basis-2/5 relative h-[80vh] hidden lg:block">
             <Image
               src="/contact.jpg"
               alt="laptop image"

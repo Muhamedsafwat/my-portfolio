@@ -10,6 +10,8 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
 
   const [isValid, setIsValid] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   //check for all inputs
   useEffect(() => {
@@ -23,6 +25,34 @@ const ContactForm = () => {
   //submit handler
   const submitHandler = (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    axios
+      .post("http://localhost:3000/api/messages", {
+        name,
+        phone,
+        email,
+        subject,
+        message,
+      })
+      .then((res) => {
+        if (res.status == 201) {
+          setName("");
+          setPhone("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          alert("Message sent successfully");
+        } else {
+          alert("Network error");
+          console.log(res);
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        alert("Network error");
+        console.log(err);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -63,10 +93,10 @@ const ContactForm = () => {
         className="py-2 px-4 border-[1px] border-gray-300 rounded-md"
       ></textarea>
       <button
-        disabled={!isValid}
+        disabled={!isValid || isLoading}
         className="bg-main rounded-md px-7 py-3 text-white mr-auto border-2 border-main hover:bg-transparent hover:text-main duration-300 disabled:opacity-50 disabled:hover:text-white disabled:hover:bg-main "
       >
-        Submit
+        {isLoading ? "Sending..." : "Submit"}
       </button>
     </form>
   );
