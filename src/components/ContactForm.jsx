@@ -26,7 +26,7 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post(`${process.env.API_URL}/api/messages`, {
+      .post(`${process.env.NEXT_PUBLIC_API_URL}/api/messages`, {
         name,
         phone,
         email,

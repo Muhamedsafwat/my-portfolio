@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const getData = () => {
       axios
-        .get(`${process.env.API_URL}/api/projects`)
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
         .then((res) => {
           if (res.status == 200) {
             console.log(res.data);

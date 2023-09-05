@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getData() {
-  const res = await fetch(`${process.env.API_URL}/api/projects`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
     next: { revalidate: 100 },
   });
   if (res.ok) {

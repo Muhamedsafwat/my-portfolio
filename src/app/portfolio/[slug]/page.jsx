@@ -7,9 +7,12 @@ import { BiCodeAlt, BiLinkExternal } from "react-icons/bi";
 import { Footer, Gallery } from "@/components";
 
 async function getData(slug) {
-  const res = await fetch(`${process.env.API_URL}/api/projects/${slug}`, {
-    next: { revalidate: 100 },
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/projects/${slug}`,
+    {
+      next: { revalidate: 100 },
+    }
+  );
   if (res.ok) {
     return res.json();
   } else {

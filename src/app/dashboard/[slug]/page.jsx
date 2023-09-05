@@ -79,9 +79,13 @@ const EditPost = ({ params }) => {
       sourceCodeLink,
     };
     axios
-      .put(`${process.env.API_URL}/api/projects/${params.slug}`, reqBody, {
-        withCredentials: true,
-      })
+      .put(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/projects/${params.slug}`,
+        reqBody,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         if (res.status == 201) {
           router.push("/dashboard");

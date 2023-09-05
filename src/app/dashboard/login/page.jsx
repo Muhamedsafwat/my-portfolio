@@ -17,7 +17,7 @@ const LoginPage = () => {
 
     axios
       .post(
-        `${process.env.API_URL}/api/auth`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth`,
         { username, password },
         { withCredentials: true }
       )

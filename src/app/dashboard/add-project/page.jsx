@@ -76,7 +76,7 @@ const AddPost = () => {
       sourceCodeLink,
     };
     axios
-      .post(`${process.env.API_URL}/api/projects`, reqBody, {
+      .post(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, reqBody, {
         withCredentials: true,
       })
       .then((res) => {
