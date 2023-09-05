@@ -11,7 +11,6 @@ const ContactForm = () => {
 
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSent, setIsSent] = useState(false);
 
   //check for all inputs
   useEffect(() => {
@@ -27,7 +26,7 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post("http://127.0.0.1:3000/api/messages", {
+      .post(`${process.env.API_URL}/api/messages`, {
         name,
         phone,
         email,

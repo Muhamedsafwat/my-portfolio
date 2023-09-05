@@ -76,7 +76,7 @@ const AddPost = () => {
       sourceCodeLink,
     };
     axios
-      .post("http://127.0.0.1:3000/api/projects", reqBody, {
+      .post(`${process.env.API_URL}/api/projects`, reqBody, {
         withCredentials: true,
       })
       .then((res) => {

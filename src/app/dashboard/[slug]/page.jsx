@@ -79,7 +79,7 @@ const EditPost = ({ params }) => {
       sourceCodeLink,
     };
     axios
-      .put(`http://127.0.0.1:3000/api/projects/${params.slug}`, reqBody, {
+      .put(`${process.env.API_URL}/api/projects/${params.slug}`, reqBody, {
         withCredentials: true,
       })
       .then((res) => {

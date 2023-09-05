@@ -13,7 +13,7 @@ const Portfolio = () => {
   useEffect(() => {
     const getData = () => {
       axios
-        .get("http://127.0.0.1:3000/api/projects")
+        .get(`${process.env.API_URL}/api/projects`)
         .then((res) => {
           if (res.status == 200) {
             setProjects(res.data);
