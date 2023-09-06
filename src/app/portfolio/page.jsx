@@ -14,6 +14,23 @@ async function getData() {
   }
 }
 
+export const metadata = {
+  title: "Muhamed Safwat || Portfolio",
+  description:
+    "The portfolio page for my websites containing all my projects and details about them",
+  keywords: [
+    "Web developer",
+    "Portfolio",
+    "Mern stack",
+    "full stack",
+    "react",
+    "nextjs",
+    "javascript",
+    "frontend",
+    "projects",
+  ],
+};
+
 const Portfolio = async () => {
   const projects = await getData();
   return (
@@ -36,7 +53,7 @@ const Portfolio = async () => {
           </p>
         </div>
       </header>
-      <div className="mt-10 grid grid-cols-1 mx-auto p-10 max-w-7xl gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 ">
+      <div className="grid grid-cols-1 mx-auto p-5 py-16 max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 md:py-28 ">
         {projects.map((item, index) => (
           <div className="aspect-[8/11] group duration-300" key={index}>
             <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
@@ -47,19 +64,15 @@ const Portfolio = async () => {
                 className="object-cover z-0"
                 alt={item.slug}
               />
-              <div
-                className={`w-full h-full bg-gradient-to-b ${
-                  item.brandColor || "from-main"
-                } to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300`}
-              />
+              <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
               <div className="w-full h-full bg-gradient-to-t to-transparent from-[rgba(0,0,0,0.8)] z-[3] absolute" />
-              <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-10 flex flex-col gap-5 items-start">
+              <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-6 md:p-10 flex flex-col gap-5 items-start">
                 <p className="text-base text-gray-300 tracking-wider font-medium ">
                   {item.category}
                 </p>
                 <h3 className="text-2xl font-bold">{item.title}</h3>
                 <Link href={`/portfolio/${item.slug}`}>
-                  <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 hover:border-main">
+                  <button className="bg-transparent border-gray-400 border-2 px-5 rounded-md py-2 duration-300 hover:border-main hover:bg-main">
                     Details
                   </button>
                 </Link>

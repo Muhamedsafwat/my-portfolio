@@ -50,6 +50,7 @@ const Portfolio = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "20px",
         },
       },
       {
@@ -57,6 +58,7 @@ const Portfolio = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "20px",
         },
       },
     ],
@@ -68,9 +70,9 @@ const Portfolio = () => {
   };
   return (
     <section id="portfolio">
-      <div className="max-w-7xl mx-auto px-10 md:px-0 pt-16 pb-10">
-        <h2 className="text-6xl font-bold mb-6">Top projects</h2>
-        <p className="text-xl text-gray-600 ml-1">
+      <div className="max-w-7xl mx-auto px-5 md:px-0 pt-10 md:pt-16 md:pb-10">
+        <h2 className="text-5xl font-bold mb-6 md:text-6xl">Top projects</h2>
+        <p className="text-xl text-gray-600 ml-1 mb-5 md:mb-0">
           Here are some of my latest projects
         </p>
       </div>
@@ -79,7 +81,7 @@ const Portfolio = () => {
           <Slider {...sliderSettings}>
             {projects.map((item, index) => (
               <div
-                className="aspect-[8/11] max-h-[80vh] p-4 pb-8 group  duration-300"
+                className="aspect-[8/11] max-h-[80vh] p-2 pb-8 group duration-300 md:p-4"
                 key={index}
               >
                 <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-500">
@@ -92,7 +94,7 @@ const Portfolio = () => {
                   />
                   <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
                   <div className="w-full h-full bg-gradient-to-t to-transparent from-[rgba(0,0,0,0.8)] z-[3] absolute" />
-                  <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-10 flex flex-col gap-5 items-start">
+                  <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-6 md:p-10 flex flex-col gap-5 items-start">
                     <p className="text-base text-gray-300 tracking-wider font-medium ">
                       {item.category}
                     </p>
@@ -108,12 +110,13 @@ const Portfolio = () => {
             ))}
           </Slider>
         ) : (
-          <div>
-            <p>Loading..</p>
+          <div className="flex items-center justify-center flex-col gap-6 min-h-[50vh]">
+            <div className="w-12 h-12 rounded-full animate-spin border-8 border-solid border-main border-t-transparent" />
+            <h3 className="text-4xl font-medium text-gray-800">Loading</h3>
           </div>
         )}
       </div>
-      <div className="flex justify-center pb-24">
+      <div className="flex justify-center pb-16 md:pb-24">
         <Link href="/portfolio">
           <button className="bg-main border-main border-2 px-5 rounded-md py-2 duration-300 hover:bg-transparent hover:border-main hover:text-main hover:translate-y-[-8px] text-white mx-auto text-lg">
             View All Projects

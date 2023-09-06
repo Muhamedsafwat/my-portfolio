@@ -4,7 +4,19 @@ import { notFound } from "next/navigation";
 
 import { BiCodeAlt, BiLinkExternal } from "react-icons/bi";
 
-import { Footer, Gallery } from "@/components";
+import { Gallery } from "@/components";
+
+export async function generateMetadata({ params }) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/projects/${params.slug}`
+  );
+  const data = await res.json();
+
+  return {
+    title: `Project || ${data.title}`,
+    description: data.description,
+  };
+}
 
 async function getData(slug) {
   const res = await fetch(
@@ -32,18 +44,18 @@ const ProjectDetails = async ({ params }) => {
           alt="project cover"
           priority
         />
-        <div className="w-full h-full bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] absolute flex justify-center items-center">
-          <h1 className="text-6xl md:text-7xl uppercase font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
+        <div className="w-full h-full px-5 bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] absolute flex justify-center items-center">
+          <h1 className="text-6xl md:text-7xl text-center uppercase font-black bg-gradient-to-br from-[#f81f01] to-[#ee076e] bg-clip-text text-transparent">
             {data.title}
           </h1>
         </div>
       </header>
-      <section className=" max-w-5xl mx-auto pb-10 px-10 mt-5 lg:pb-0">
+      <section className=" max-w-5xl mx-auto px-5 mt-5 lg:pb-0">
         <h2 className="text-4xl font-extrabold py-5 my-5 border-b-[1px] border-gray-200">
           Description:
         </h2>
         <p className="text-2xl ">{data.description}</p>
-        <div className="flex gap-16 mt-8">
+        <div className="flex flex-col gap-10 mt-10 lg:flex-row lg:gap-16">
           <div>
             <h3 className="text-3xl mb-2">Project type</h3>
             <p className="text-xl">{data.category}</p>
@@ -51,6 +63,7 @@ const ProjectDetails = async ({ params }) => {
           <div>
             <h3 className="text-3xl mb-2">Live preview</h3>
             <a
+              target="_blank"
               href={data.previewLink}
               className="flex items-center gap-1 hover:text-main"
             >
@@ -61,6 +74,7 @@ const ProjectDetails = async ({ params }) => {
           <div>
             <h3 className="text-3xl mb-2">Source code </h3>
             <a
+              target="blank"
               href={data.sourceCodeLink}
               className="flex items-center gap-1 hover:text-main"
             >
@@ -70,19 +84,19 @@ const ProjectDetails = async ({ params }) => {
           </div>
         </div>
       </section>
-      <section className=" max-w-5xl mx-auto pb-10 px-10  lg:pb-0">
+      <section className="max-w-5xl mx-auto px-5 lg:pb-0">
         <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Features:
         </h2>
         <ul className="text-xl">
           {data.features.map((item, index) => (
-            <li className="my-4 list-disc ml-8" key={index}>
+            <li className="mt-4 list-disc ml-8 lg:my-4" key={index}>
               {item}
             </li>
           ))}
         </ul>
       </section>
-      <section className=" max-w-5xl mx-auto pb-10 px-10 lg:pb-0">
+      <section className=" max-w-5xl mx-auto pb-1 px-5 lg:pb-0">
         <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Technologies used:
         </h2>
@@ -94,13 +108,12 @@ const ProjectDetails = async ({ params }) => {
           ))}
         </ul>
       </section>
-      <section className="pb-20 max-w-6xl px-10 mx-auto">
-        <h2 className="text-3xl font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
+      <section className="pb-16 w-screen max-w-6xl mx-auto">
+        <h2 className="text-3xl ml-5 font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Gallery:
         </h2>
         <Gallery gallery={data.gallery} />
       </section>
-      <Footer />
     </>
   );
 };

@@ -16,7 +16,7 @@ const About = () => {
             fill={true}
           />
         </div>
-        <div className="lg:basis-2/3 px-10 flex flex-col mt-10 lg:mt-36 lg:text-start">
+        <div className="lg:basis-2/3 px-5 flex flex-col mt-10 lg:mt-36 lg:text-start">
           <h2 className="text-6xl font-bold mb-6">About</h2>
           <p className="text-2xl text-gray-600">
             A Sofware Engineer and a frontend focused web developer who is

@@ -13,7 +13,7 @@ const NavBar = () => {
 
   const logoutHandler = () => {
     axios
-      .post("http://localhost:3000/api/auth/logout")
+      .post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`)
       .then(() => {
         logout();
         router.push("/");
@@ -22,7 +22,7 @@ const NavBar = () => {
   };
   return (
     <header className="absolute top-0 left-0 right-0 z-10 text-gray-100">
-      <div className="max-w-7xl px-6 mx-auto flex justify-between items-center h-24 md:h-32">
+      <div className="max-w-7xl px-5 mx-auto flex justify-between items-center h-24 md:h-32">
         <Link
           href="/"
           className="font-bold text-3xl text-white cursor-pointer "
@@ -78,6 +78,7 @@ const NavBar = () => {
             <div className="flex flex-col text-lg">
               {links.map((item, index) => (
                 <Link
+                  onClick={() => setIsOpen(false)}
                   href={item.url}
                   className="hover:text-main hover:px-16 cursor-pointer duration-300 py-3 px-14 font-medium"
                   key={index}

@@ -6,6 +6,11 @@ import { BiLogoLinkedin } from "react-icons/bi";
 
 import { Footer, ContactForm } from "@/components";
 
+export const metadata = {
+  title: "Muhamed Safwat || Contact",
+  description: "The contact page for my website containing all contact info",
+};
+
 const Contact = () => {
   const submitHandler = (e) => {
     e.preventDefault();
@@ -30,7 +35,7 @@ const Contact = () => {
         </div>
       </header>
       <section className="bg-gray-100">
-        <div className="flex flex-col max-w-7xl px-10 py-20 pb-16 gap-[5rem] mx-auto lg:flex-row lg:py-28 lg:gap-10">
+        <div className="flex flex-col max-w-7xl px-5 py-20 pb-16 gap-[5rem] mx-auto lg:flex-row lg:py-28 lg:gap-10">
           {contactCards.map((item, index) => (
             <a key={index} className="flex-1" href={item.url}>
               <div className="relative  cursor-pointer group">
@@ -47,7 +52,7 @@ const Contact = () => {
         </div>
       </section>
       <section className="bg-white">
-        <div className="flex max-w-7xl items-center px-10 py-28 gap-16 mx-auto flex-col lg:flex-row">
+        <div className="flex max-w-7xl items-center px-5 py-12 gap-16 mx-auto flex-col lg:flex-row lg:py-28">
           <div className="basis-3/5">
             <h2 className="text-5xl font-bold">Leave a message</h2>
             <p className="text-2xl mt-5">
@@ -67,7 +72,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
