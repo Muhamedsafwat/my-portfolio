@@ -49,7 +49,7 @@ const ProjectGallery = ({ gallery }) => {
     <Slider {...sliderSettings}>
       {gallery.map((item, index) => (
         <div key={index} className="p-0 md:p-2">
-          <div className="relative min-h-[200px] max-h-[500px]">
+          <div className="relative aspect-[12/6]">
             <Image
               className="object-contain"
               fill
