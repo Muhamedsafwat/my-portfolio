@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FiMail } from "react-icons/fi";
 import {
@@ -11,8 +12,14 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const path = usePathname();
   return (
-    <section id="contact" className="flex items-end text-white">
+    <footer
+      id="contact"
+      className={`items-end text-white ${
+        path.includes("dashboard") ? "hidden" : "flex"
+      } `}
+    >
       <div className="basis-1/2 relative h-[500px] rounded-tr-lg shadow-lg shadow-gray-700 overflow-hidden bg-[url(/pattern-1.png)] hidden lg:block">
         <div className="bg-gradient-to-br from-[#da1900] to-[#c5075d] absolute w-full h-full opacity-[0.85] z-0" />
         <div className="z-10 relative h-full w-full flex justify-center flex-col px-20 2xl:px-40 ">
@@ -71,7 +78,7 @@ const Footer = () => {
           <Link href="/dashboard/login">Muhamed Safwat</Link>
         </p>
       </div>
-    </section>
+    </footer>
   );
 };
 

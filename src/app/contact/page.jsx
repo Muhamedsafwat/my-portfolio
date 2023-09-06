@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
       </section>
       <section className="bg-white">
-        <div className="flex max-w-7xl items-center px-5 py-12 gap-16 mx-auto flex-col lg:flex-row lg:py-28">
+        <div className="flex max-w-7xl items-center px-7 py-12 gap-16 mx-auto flex-col lg:flex-row lg:py-28">
           <div className="basis-3/5">
             <h2 className="text-5xl font-bold">Leave a message</h2>
             <p className="text-2xl mt-5">

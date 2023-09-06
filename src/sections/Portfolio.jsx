@@ -81,7 +81,7 @@ const Portfolio = () => {
           <Slider {...sliderSettings}>
             {projects.map((item, index) => (
               <div
-                className="aspect-[8/11] max-h-[80vh] p-2 pb-8 group duration-300 md:p-4"
+                className="aspect-[8/11] max-h-[80vh] p-2  group duration-300 md:p-4 mb-5"
                 key={index}
               >
                 <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-500">

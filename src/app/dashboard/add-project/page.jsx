@@ -24,6 +24,7 @@ const AddPost = () => {
   const [sourceCodeLink, setSourceCodeLink] = useState("");
   const [thumbnail, setThumbnail] = useState(null);
   const [cover, setCover] = useState(null);
+  const [highlight, setHighlight] = useState(false);
   //Add feature to features array
   const addFeature = () => {
     setFeatures([...features, featuresRef.current.value]);
@@ -74,6 +75,7 @@ const AddPost = () => {
       category,
       previewLink,
       sourceCodeLink,
+      highlight,
     };
     axios
       .post(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, reqBody, {
@@ -237,6 +239,14 @@ const AddPost = () => {
               onChange={(e) => setCover(e.target.files[0])}
               id="cover"
               type="file"
+            />
+          </div>
+          <div className="flex items-center gap-5 ">
+            <label htmlFor="highlight">Highlight project ?</label>
+            <input
+              onChange={() => setHighlight(!highlight)}
+              id="highlight"
+              type="checkbox"
             />
           </div>
         </div>

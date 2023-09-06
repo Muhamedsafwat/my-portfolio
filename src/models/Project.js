@@ -19,6 +19,7 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
+  highlight: Boolean,
   gallery: [String],
   description: String,
   features: [String],
