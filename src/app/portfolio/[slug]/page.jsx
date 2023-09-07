@@ -108,7 +108,7 @@ const ProjectDetails = async ({ params }) => {
           ))}
         </ul>
       </section>
-      <section className="pb-16 w-screen max-w-6xl mx-auto">
+      <section className="pb-16 w-screen overflow-hidden max-w-6xl mx-auto">
         <h2 className="text-3xl ml-5 font-extrabold py-5 mt-5 border-b-[1px] border-gray-200">
           Gallery:
         </h2>
