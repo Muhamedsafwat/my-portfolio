@@ -37,7 +37,7 @@ const Contact = () => {
       <section className="bg-gray-100">
         <div className="flex flex-col max-w-7xl px-5 py-20 pb-16 gap-[5rem] mx-auto lg:flex-row lg:py-28 lg:gap-10">
           {contactCards.map((item, index) => (
-            <a key={index} className="flex-1" href={item.url}>
+            <a key={index} className="flex-1" target="_blank" href={item.url}>
               <div className="relative  cursor-pointer group">
                 <div className="bg-white w-[5rem] h-[5rem] text-main flex rounded-full border-4 border-gray-100 absolute top-[-3rem] group-hover:bg-main group-hover:text-white duration-300 left-4 items-center justify-center">
                   {item.icon}

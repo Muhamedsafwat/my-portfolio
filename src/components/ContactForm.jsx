@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import axios from "axios";
 
 const ContactForm = () => {
@@ -25,33 +26,28 @@ const ContactForm = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    axios
-      .post(`${process.env.NEXT_PUBLIC_API_URL}/api/messages`, {
-        name,
-        phone,
-        email,
-        subject,
-        message,
-      })
-      .then((res) => {
-        if (res.status == 201) {
-          setName("");
-          setPhone("");
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          alert("Message sent successfully");
-        } else {
-          alert("Network error");
-          console.log(res);
+    emailjs
+      .sendForm(
+        "service_qzifqv1",
+        "template_6vdaoq4",
+        e.target,
+        "dBz5a2coPV_IpVWjA"
+      )
+      .then(
+        (result) => {
+          if (result.text == "OK") {
+            alert("Thank you for getting in touch!");
+            setName("");
+            setEmail("");
+            setMessage("");
+            setPhone("");
+            setSubject("");
+          }
+        },
+        (error) => {
+          console.log(error.text);
         }
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        alert("Network error");
-        console.log(err);
-        setIsLoading(false);
-      });
+      );
   };
 
   return (
@@ -63,24 +59,28 @@ const ContactForm = () => {
         onChange={(e) => setName(e.target.value)}
         type="text"
         placeholder="your name"
+        name="name"
         minLength={5}
       />
       <input
         onChange={(e) => setPhone(e.target.value)}
         type="tel"
         placeholder="phone number"
+        name="phone"
         minLength={11}
       />
       <input
         onChange={(e) => setEmail(e.target.value)}
         type="email"
         placeholder="email"
+        name="email"
         minLength={12}
       />
       <input
         onChange={(e) => setSubject(e.target.value)}
         type="text"
         placeholder="subject"
+        name="subject"
         minLength={5}
       />
       <textarea
@@ -89,6 +89,7 @@ const ContactForm = () => {
         cols="30"
         rows="5"
         placeholder="Leave your message here"
+        name="message"
         className="py-2 px-4 border-[1px] border-gray-300 rounded-md"
       ></textarea>
       <button
