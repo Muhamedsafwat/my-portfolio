@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
 
 const ContactForm = () => {
   const [name, setName] = useState("");

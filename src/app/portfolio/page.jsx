@@ -56,7 +56,7 @@ const Portfolio = async () => {
       <div className="grid grid-cols-1 mx-auto p-5 py-16 max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 md:py-28 ">
         {projects.map((item, index) => (
           <div className="aspect-[8/11] group duration-300" key={index}>
-            <div className="relative h-full w-full rounded-lg overflow-hidden group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
+            <div className="relative h-full w-full rounded-lg overflow-hidden lg:group-hover:scale-105 duration-300 shadow-lg shadow-gray-800">
               <Image
                 src={item.thumbnail}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -64,7 +64,7 @@ const Portfolio = async () => {
                 className="object-cover z-0"
                 alt={item.slug}
               />
-              <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 group-hover:opacity-80 duration-300" />
+              <div className="w-full h-full bg-gradient-to-b from-main to-[rgba(0,0,0,0.8)] z-[2] absolute opacity-0 lg:group-hover:opacity-80 duration-300" />
               <div className="w-full h-full bg-gradient-to-t to-transparent from-[rgba(0,0,0,0.8)] z-[3] absolute" />
               <div className="absolute bottom-0 left-0 text-white z-10 duration-300 p-6 md:p-10 flex flex-col gap-5 items-start">
                 <p className="text-base text-gray-300 tracking-wider font-medium ">
