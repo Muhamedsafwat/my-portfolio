@@ -38,6 +38,7 @@ export async function GET(request) {
   }
 
   const projects = await Project.find();
+  projects.reverse();
 
   if (projects) {
     return new NextResponse(JSON.stringify(projects), { status: 200 });

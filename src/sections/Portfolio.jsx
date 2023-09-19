@@ -13,7 +13,7 @@ const Portfolio = () => {
   useEffect(() => {
     const getData = () => {
       axios
-        .get(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/highlights`)
         .then((res) => {
           if (res.status == 200) {
             setProjects(res.data);
