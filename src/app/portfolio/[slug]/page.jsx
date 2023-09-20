@@ -15,6 +15,19 @@ export async function generateMetadata({ params }) {
   return {
     title: `Project || ${data.title}`,
     description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      url: `https://www.muhamedsafwat.com/portfolio/${data.slug}`,
+      siteName: "Muhamed Safwat",
+      images: [
+        {
+          url: data.cover,
+          width: 1250,
+          height: 300,
+        },
+      ],
+    },
   };
 }
 

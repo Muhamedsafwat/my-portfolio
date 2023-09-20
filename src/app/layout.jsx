@@ -7,9 +7,13 @@ import AuthContext from "@/context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL("https://muhamedsafwat.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Muhamed Safwat || Web dev",
   description:
-    "A Sofware Engineer and a frontend focused web developer who is passionate about building websites and web applications that lead to the success of your business",
+    "A Software Engineer and a frontend focused web developer who is passionate about building websites and web applications that lead to the success of your business",
   keywords: [
     "Web developer",
     "Portfolio",
@@ -27,6 +31,19 @@ export const metadata = {
     shortcut: ["apple-touch-icon.png"],
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    title: "Muhamed Safwat || Web dev",
+    description: "I turn coffee into code!",
+    url: "https://www.muhamedsafwat.com/",
+    siteName: "Muhamed Safwat",
+    images: [
+      {
+        url: "/og.png",
+        width: 1900,
+        height: 930,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
