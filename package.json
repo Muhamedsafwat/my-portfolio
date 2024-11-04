@@ -1,35 +1,28 @@
 {
-  "name": "server",
-  "description": "A blank template to get started with Payload",
-  "version": "1.0.0",
-  "main": "dist/server.js",
-  "license": "MIT",
+  "name": "starter",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
-    "build:payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
-    "build:server": "tsc",
-    "build": "yarn copyfiles && yarn build:payload && yarn build:server",
-    "serve": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js NODE_ENV=production node dist/server.js",
-    "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
-    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types",
-    "generate:graphQLSchema": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:graphQLSchema",
-    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@payloadcms/bundler-webpack": "^1.0.0",
-    "@payloadcms/db-mongodb": "^1.0.0",
-    "@payloadcms/plugin-cloud": "^3.0.0",
-    "@payloadcms/richtext-slate": "^1.0.0",
-    "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
-    "express": "^4.19.2",
-    "payload": "^2.0.0"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.9",
-    "copyfiles": "^2.4.1",
-    "nodemon": "^2.0.6",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.8.4"
+    "@emailjs/browser": "^3.11.0",
+    "autoprefixer": "10.4.15",
+    "axios": "^1.5.0",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "next": "13.4.19",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "3.3.3"
   }
 }
