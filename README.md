@@ -1,2 +1,2 @@
 # my-portfolio
-My portfolio website built using Nextjs and Payload CMS
+My portfolio website built using Nextjs 13 and tailwind
